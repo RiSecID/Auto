@@ -48,4 +48,3 @@ Covid
 quotly
 events
 spotify_token
-PyAudio>=0.2.9	
