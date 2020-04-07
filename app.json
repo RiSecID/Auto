@@ -1,6 +1,6 @@
 {
-  "name": "Project Bish UserBot",
-  "description": "[projectbish] A modular Telegram userbot running on Python 3.8",
+  "name": "JefanyaBot",
+  "description": "[Jefanyabot] A modular Telegram userbot running on Python 3.8",
   "keywords": [
     "telegram",
     "userbot",
@@ -8,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/adekmaulana/ProjectBish",
+  "repository": "https://github.com/jefa2231/Auto",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/PPE_Support",
   "stack": "container",
@@ -27,12 +27,12 @@
     },
     "HEROKU_API_KEY": {
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-      "value": "",
+      "value": "9b1e8f5b-9b31-4805-bcc6-9374fa944600",
       "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Add the Heroku app name here. It helps with userbot updates.",
-      "value": "",
+      "value": "jefanyabot",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
@@ -45,6 +45,7 @@
     },
     "COUNTRY": {
       "description": "Set your Country to be used in the .time and .date commands.",
+      "value": "ID",
       "required": false
     },
     "TZ_NUMBER": {
@@ -68,11 +69,11 @@
     },
     "BOTLOG": {
       "description": "Incase you want to turn off logging, put this to false",
-      "value": "False"
+      "value": "True"
     },
     "BOTLOG_CHATID": {
       "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
-      "value": "0"
+      "value": "-1001488159917",
     },
     "CONSOLE_LOGGER_VERBOSE": {
       "description": "If you need verbosity on the console logging",
@@ -84,6 +85,7 @@
     },
     "YOUTUBE_API_KEY": {
       "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
+      "value": "o8qMDyx5axEd5QgDuBHrmfLu",
       "required": false
     },
     "OCR_SPACE_API_KEY": {
@@ -92,7 +94,8 @@
     },
     "REM_BG_API_KEY": {
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
-      "required": false
+      "value": "o8qMDyx5axEd5QgDuBHrmfLu",
+      "required": true
     },
     "ANTI_SPAMBOT": {
       "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
@@ -162,7 +165,7 @@
     },
     "QUOTES_API_TOKEN": {
       "description": "API for quotes module get it from http://antiddos.systems",
-      "value": "",
+      "value": "8d52414c-7bb1-4605-8bfb-03530a7a4de4",
       "required": true
     },
     "LOGSPAMMER": {
