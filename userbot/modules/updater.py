@@ -99,7 +99,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit('`Successfully Updated!\n'
-                     'Bot is restarting... Wait for a second!`\n Bot By : [Jefanya Efandchris](t.me/JejakCheat)')
+                     'Bot is restarting... Wait for a second!` \nBot By : [Jefanya Efandchris](t.me/JejakCheat)')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -109,7 +109,7 @@ async def update(event, repo, ups_rem, ac_br):
 @register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Checking for updates, please wait....`[Jefanya Efandchris](t.me/JejakCheat)")
+    await event.edit("`Checking for updates, please wait....`Bot By[Jefanya Efandchris](t.me/JejakCheat)")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
