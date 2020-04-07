@@ -62,8 +62,10 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply("I'm still AFK."
-                                            f"\nReason: `{AFKREASON}`")
+                        await mention.reply("
+                                            f" `{AFKREASON}`\n"
+                                            "\nBot By : [Jefanya Efandchris](t.me/JejakCheat)"
+                                            ")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
@@ -140,7 +142,7 @@ async def type_afk_is_not_true(notafk):
     global AFKREASON
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("I'm no longer AFK.")
+        msg = await notafk.respond("Im Online.")
         await sleep(2)
         await msg.delete()
         if BOTLOG:
