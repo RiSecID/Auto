@@ -51,7 +51,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Kalau mau Servis Web silahkan kirim OIDnya`")
 	sleep(1)
-	await typew.edit("`Kirim ORDER ID nya bos kalau mau servis/perpanjang` \n#SenturyBot")
+	await typew.edit("`Kirim ORDER ID nya bos kalau mau servis/perpanjang` \nBot By : [#Jefanya](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
