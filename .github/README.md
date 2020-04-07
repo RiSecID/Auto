@@ -1,7 +1,7 @@
 [![Build](https://github.com/jefa2231/Auto/workflows/FailedChecker/badge.svg?branch=master)](https://github.com/jefa2231/Auto/actions "Build")
-<h1 align="center">ProjectBish UserBot</h1>
+<h1 align="center">SENTURY BOT</h1>
 <h3 align="center">A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.</h3>
-<h4 align="center">Based on RaphielGang's <a href="https://github.com/jefa2231/Auto">Paperplane</a> Telegram userbot...</h4>
+<h4 align="center">Based on JejakCheather's <a href="https://github.com/jefa2231/Auto">Auto</a> Telegram userbot...</h4>
 <p align="center"><a href="#how-to-host">How To Host</a> | <a href="#credits">Credits</a> | <a href="#setting-up-google-drive">Setting up Google Drive</a> | <a href="#license">License</a></p>
 <p align="center">&nbsp;</p>
 <h2 align="center">How To Host</h2>
@@ -15,4 +15,4 @@
 <p align="center"><a href="https://telegra.ph/How-To-Setup-Google-Drive-04-03">README</a></p>
 <p align="center">&nbsp;</p>
 <h2 align="center">License</h2>
-<p align="center"><a href="https://github.com/jefa2231/Auto/blob/master/LICENSE">Raphielscape Public License</a> - Version 1.c, June 2019</p>
+<p align="center"><a href="https://github.com/jefa2231/Auto/blob/master/LICENSE">SenturyBot Public License</a> - Version 1.c, June 2019</p>
