@@ -51,7 +51,7 @@ quotly
 events
 spotify_token
 pip>=9.0.1
-requests>=2.11.1
+
 setuptools>=28.8.0
 SpeechRecognition>=3.4.6
 wheel>=0.30.0a0
