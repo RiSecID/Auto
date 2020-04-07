@@ -45,3 +45,5 @@ telegraph
 python-dateutil
 git+https://github.com/johnwmillr/LyricsGenius.git
 Covid
+quotly
+events
