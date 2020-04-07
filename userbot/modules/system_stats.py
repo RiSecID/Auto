@@ -128,9 +128,9 @@ async def amireallyalive(alive):
                      f"•  User             : {DEFAULTUSER}\n"
                      f"•  Python           : {python_version()}\n"
                      f"•  Telethon version : {version.__version__}\n"
-                     f"------------------------------------\n"
+                     f"------------------------------------\n`"
                      "Beli Phising & Daftar Bot ? Chat [Jefanya Efandchris](t.me/JejakCheat)\n"
-                     `")
+                     "")
 
 
 @register(outgoing=True, pattern="^.aliveu")
