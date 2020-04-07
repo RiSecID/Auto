@@ -62,10 +62,10 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply("
+                        await mention.reply(""
                                             f" `{AFKREASON}`\n"
-                                            "\nBot By : [Jefanya Efandchris](t.me/JejakCheat)"
-                                            ")
+                                            "\nBot By : [Jefanya Efandchris](t.me/JejakCheat)")
+                                            
                     else:
                         await mention.reply(str(choice(AFKSTR)))
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
