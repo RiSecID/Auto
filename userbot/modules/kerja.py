@@ -63,7 +63,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via BCA YA`")
 	sleep(1)
-	await typew.edit("`BCA :`0901316839 `A/N PILU EFENDI` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n#SenturyBot")
+	await typew.edit("`BCA :`0901316839 `A/N PILU EFENDI` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -75,7 +75,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via TELKOMSEL YA`")
 	sleep(1)
-	await typew.edit("`TELKOMSEL :`082247870713 `A/N -` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n#SenturyBot")
+	await typew.edit("`TELKOMSEL :`082247870713 `A/N -` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -87,7 +87,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via BNI YA`")
 	sleep(1)
-	await typew.edit("`BNI :`0830301026 `A/N Jefanya Efandchris` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n#SenturyBot")
+	await typew.edit("`BNI :`0830301026 `A/N Jefanya Efandchris` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -99,7 +99,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via OVO YA`")
 	sleep(1)
-	await typew.edit("`OVO :`082247870713 `A/N NI KETUT SUERTI` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n#SenturyBot")
+	await typew.edit("`OVO :`082247870713 `A/N NI KETUT SUERTI` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 # Create by myself @JejakCheat
 @register(outgoing=True, pattern='^.danaj(?: |$)(.*)')
@@ -110,7 +110,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via DANA YA`")
 	sleep(1)
-	await typew.edit("`DANA :`085320064210 `A/N Sutri nanda` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n[#JefanyaBot](t.me/JejakCheat)")
+	await typew.edit("`DANA :`085320064310 `A/N Sutri nanda` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 # Create by myself @JejakCheat
 @register(outgoing=True, pattern='^.bcaj(?: |$)(.*)')
@@ -133,7 +133,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Payment Via DANA YA`")
 	sleep(1)
-	await typew.edit("`DANA :`082247870713` A/N Jefanya Efandchris` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \n#SenturyBot")
+	await typew.edit("`DANA :`082247870713` A/N Jefanya Efandchris` \nSertakan Bukti Transfer Ya (Wajib) Untuk melanjutkan transaksi \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -145,7 +145,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Tolong Kirim Data Ya`")
 	sleep(1)
-	await typew.edit("`Kirim Email + Tampilan yang sudah di request di atas` (Sesuai nama di demo.senturypanel.xyz) \n#SenturyBot")
+	await typew.edit("`Kirim Email + Tampilan yang sudah di request di atas` (Sesuai nama di demo.senturypanel.xyz) \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -157,7 +157,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Saya Kirim Data Ya`")
 	sleep(1)
-	await typew.edit("`UPDATE HARGA HARI INI` \n\nDOMAIN : 150.000 (Bisa Request Nama Web) \nDOMAIN : 70.000 (Tidak Bisa Request Nama Web) \nSUBDOMAIN : 20.000 (SELAIN PULSA) \nSUBDOMAIN : 25.000 (Via Pulsa) \n\nSetuju ? Balas `yes` Tidak Setuju balas `no` \n\n#SenturyBot")
+	await typew.edit("`UPDATE HARGA HARI INI` \n\nDOMAIN : 150.000 (Bisa Request Nama Web) \nDOMAIN : 70.000 (Tidak Bisa Request Nama Web) \nSUBDOMAIN : 20.000 (SELAIN PULSA) \nSUBDOMAIN : 25.000 (Via Pulsa) \n\nSetuju ? Balas `yes` Tidak Setuju balas `no` \n\nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -169,7 +169,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Bot Is Online`\n#SenturyBot")
 	sleep(1)
-	await typew.edit("`JIKA ADA ERROR ATAU BUG DI TAMPILAN PHISING KALIAN TINGGAL SURUH TEMAN KALIAN UNTUK MEMBUKA WEB KALIAN ITU \n\nSyarat : \n1. BEDA HP \n2. BEDA SINYAL \n3. BELUM PERNAH BUKA WEB ITU`\n#SenturyBot")
+	await typew.edit("`JIKA ADA ERROR ATAU BUG DI TAMPILAN PHISING KALIAN TINGGAL SURUH TEMAN KALIAN UNTUK MEMBUKA WEB KALIAN ITU \n\nSyarat : \n1. BEDA HP \n2. BEDA SINYAL \n3. BELUM PERNAH BUKA WEB ITU`\nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
@@ -181,7 +181,7 @@ async def typewriter(typew):
 	sleep(2)
 	await typew.edit("`Bot Is Online`\n#SenturyBot")
 	sleep(1)
-	await typew.edit("**EXP TIME !!** \nMaaf bos, phising saya matikan atau saya alihkan ke `exp.senturypanel.xyz` \nDikarenakan Sudah melewati tanggal kadaluarsa \nDan jika mau perpanjang silahkan balas pesan ini dengan **Yes** \nDan jika tidak mau perpanjang silahkan balas **No** \n#SenturyBot")
+	await typew.edit("**EXP TIME !!** \nMaaf bos, phising saya matikan atau saya alihkan ke `exp.senturypanel.xyz` \nDikarenakan Sudah melewati tanggal kadaluarsa \nDan jika mau perpanjang silahkan balas pesan ini dengan **Yes** \nDan jika tidak mau perpanjang silahkan balas **No** \nBot By : [#JefanyaBot](t.me/JejakCheat)")
 
 
 # Create by myself @JejakCheat
