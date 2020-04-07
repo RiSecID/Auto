@@ -21,7 +21,7 @@ from userbot.modules.admin import get_user_from_event
 
 # @borg.on(events.NewMessage(pattern=r"\.semua", outgoing=True))
 #@borg.on(admin_cmd("all"))
-@register(outgoing=True, pattern="^.all$")
+@register(outgoing=True, pattern="^.semua$")
 async def all(event):
     if event.fwd_from:
         return
