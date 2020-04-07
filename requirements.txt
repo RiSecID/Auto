@@ -47,3 +47,4 @@ git+https://github.com/johnwmillr/LyricsGenius.git
 Covid
 quotly
 events
+spotify_token
