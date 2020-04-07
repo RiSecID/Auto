@@ -1,3 +1,4 @@
+[![Build](https://github.com/jefa2231/Auto/workflows/FailedChecker/badge.svg?branch=master)](https://github.com/jefa2231/Auto/actions "Build")
 <h1 align="center">ProjectBish UserBot</h1>
 <h3 align="center">A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.</h3>
 <h4 align="center">Based on RaphielGang's <a href="https://github.com/jefa2231/Auto">Paperplane</a> Telegram userbot...</h4>
