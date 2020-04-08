@@ -1,10 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-# The entire source code is OSSRPL except 'whois' which is MPL
-# License: MPL and OSSRPL
+#@JejakCheat
 """ Userbot module for getting info about any user on Telegram(including you!). """
 
 import os
@@ -141,6 +135,7 @@ async def fetch_info(replied_user, event):
     caption += f"Obrolan umum dengan pengguna ini: {common_chat}\n"
     caption += f"Link Profile Selamanya Milik Pengguna ini: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
+    caption += f"Bot By : [#JefanyaBot](t.me/JejakCheat)"
 
     return photo, caption
 
