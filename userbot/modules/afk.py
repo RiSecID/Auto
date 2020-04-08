@@ -126,11 +126,11 @@ async def set_afk(afk_e):
     if string:
         AFKREASON = string
         await afk_e.edit("Going AFK!"
-                         f"\nReason: `{string}`")
+                         f"\nAlasan: `{string}`")
     else:
-        await afk_e.edit("Going AFK!")
+        await afk_e.edit("Pergi AFK!")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nKamu Sekarang AFK")
     ISAFK = True
     raise StopPropagation
 
@@ -144,7 +144,7 @@ async def type_afk_is_not_true(notafk):
     global AFKREASON
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("Im Online.")
+        msg = await notafk.respond("Aku Online Kembali.\nBot By : [#SenturyBot](t.me/JejakCheat)")
         await sleep(2)
         await msg.delete()
         if BOTLOG:
@@ -169,7 +169,7 @@ async def type_afk_is_not_true(notafk):
 CMD_HELP.update({
     "afk":
     ">`.afk [Optional Reason]`"
-    "\nUsage: Sets you as afk.\nReplies to anyone who tags/PM's "
-    "you telling them that you are AFK(reason)."
-    "\n\nSwitches off AFK when you type back anything, anywhere."
+    "\nUsage: Aktifkan fitur afk.\nMaka otomatis akan menjawab semua orang yang sedang menyapa kamu di chat saat AFK "
+    "kamu memberitahu mereka kalau kamu sedang AFK (reason)."
+    "\n\nKirim pesan apapun untuk kembali dari AFK."
 })
