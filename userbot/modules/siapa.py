@@ -134,7 +134,7 @@ async def fetch_info(replied_user, event):
     caption += f"Bio: \n<code>{user_bio}</code>\n\n"
     caption += f"Obrolan umum dengan pengguna ini: {common_chat}\n"
     caption += f"Link Profile Selamanya Milik Pengguna ini: "
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
+    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
     caption += f"Bot By : <a href=t.me/JejakCheat>#SenturyBot</a>"
 
     return photo, caption
