@@ -133,12 +133,12 @@ async def amireallyalive(alive):
                      "")
 
 
-@register(outgoing=True, pattern="^.setname")
+@register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
-    """ For .setname command, change the username in the .alive command. """
+    """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = '.setname [new user without brackets] nor can it be empty'
-    if not (message == '.setname' or message[7:8] != ' '):
+    output = '.aliveu [new user without brackets] nor can it be empty'
+    if not (message == '.aliveu' or message[7:8] != ' '):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
@@ -169,7 +169,7 @@ CMD_HELP.update({
     "alive":
     ">`.alive`"
     "\nUsage: Type .alive to see wether your bot is working or not."
-    "\n\n>`.setname <text>`"
+    "\n\n>`.aliveu <text>`"
     "\nUsage: Changes the 'user' in alive to the text you want."
     "\n\n>`.resetalive`"
     "\nUsage: Resets the user to default."
