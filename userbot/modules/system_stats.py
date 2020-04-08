@@ -124,7 +124,8 @@ async def amireallyalive(alive):
     await alive.edit(""
                      "**SenturyBot ONLINE, gunakan dengan bijak ya !!....\n**"
                      f"`------------------------------------\n`"
-                     f"•  Nama             : **{DEFAULTUSER}\n**"
+                     f"•  Nama             : **{NAMA}\n**"
+                     
                      f"`------------------------------------\n`"
                      f"•  Python           : `{python_version()}\n`"
                      f"•  Versi Telethon   : `{version.__version__}\n`"
@@ -140,8 +141,8 @@ async def amireallyaliveuser(username):
     output = '.aliveu [Isi Namamu] karena ini tidak bisa kosong'
     if not (message == '.aliveu' or message[7:8] != ' '):
         newuser = message[8:]
-        global DEFAULTUSER
-        DEFAULTUSER = newuser
+        global NAMA
+        NAMA = newuser
         output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
     
