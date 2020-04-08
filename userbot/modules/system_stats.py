@@ -17,7 +17,6 @@ from userbot.events import register
 
 # ================= CONSTANT =================
 NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-IG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 @register(outgoing=True, pattern="^.sysd$")
@@ -147,18 +146,7 @@ async def amireallyaliveuser(username):
         output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
     
-    @register(outgoing=True, pattern="^.setig")
-async def amireallyaliveuser(ig):
-    """ For .setig command, change the ig in the .alive command. """
-    message = ig.text
-    output = '.setig [Isi IG] karena ini tidak bisa kosong'
-    if not (message == '.setig' or message[7:8] != ' '):
-        newuser = message[8:]
-        global IG
-        IG = newuser
-        output = 'Ig Berhasil Diganti Menjadi ' + newuser + '!'
-    await ig.edit("`" f"{output}" "`")
- 
+   
    
 
 @register(outgoing=True, pattern="^.resetalive$")
@@ -168,13 +156,7 @@ async def amireallyalivereset(ureset):
     NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Sukses mengulangi data awal!" "`")
     
-    @register(outgoing=True, pattern="^.resetaliveig$")
-async def amireallyalivereset(ureset):
-    """ For .resetalive command, reset the username in the .alive command. """
-    global IG
-    IG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Sukses mengulangi data awal!" "`")
-
+ 
 
 CMD_HELP.update({
     "sysd":
@@ -191,10 +173,7 @@ CMD_HELP.update({
     "\nFungsi: Ketik .on Untuk melihat apakah bot **Aktif** atau **Tidak**."
     "\n\n>`.setname <text>`"
     "\nFungsi: Mengganti 'nama' di teks .on."
-     "\n\n>`.setig <text>`"
-    "\nFungsi: Mengganti 'instagram' di teks .on."
     "\n\n>`.resetalive`"
     "\nFungsi: Mereset setting nama .on menjadi semula."
-    "\n\n>`.resetaliveig`"
-    "\nFungsi: Mereset setting instagram .on menjadi semula."
+  
 })
