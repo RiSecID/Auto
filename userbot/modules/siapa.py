@@ -126,7 +126,7 @@ async def fetch_info(replied_user, event):
     caption += f"<i>Nama Belakang: {last_name}</i>\n"
     caption += f"<i>Nama Pengguna:</i> {username}\n"
     caption += f"<i>ID Pusat Data: {dc_id}</i>\n"
-    caption += f"<i>Jumlah PP:    {replied_user_profile_photos_count}</i>\n"
+    caption += f"<i>Jumlah PP: {replied_user_profile_photos_count}</i>\n"
     caption += f"<i>Dia bot: {is_bot}</i>\n"
     caption += f"<i>Di Dibatasi: {restricted}</i>\n"
     caption += f"<i>Verifikasi telegram: {verified}</i>\n"
@@ -134,7 +134,7 @@ async def fetch_info(replied_user, event):
     caption += f"<i>Grup yang sama: {common_chat}</i>\n\n"
     caption += f"<i>Link Profile Selamanya Milik Pengguna ini:</i> "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
-    caption += f"<i>Bio:</i>{user_bio}\n\n"
+    caption += f"<i>Bio: </i>{user_bio}\n\n"
     caption += f"<u>Bot By : <a href=t.me/JejakCheat>#SenturyBot</a></u>"
 
     return photo, caption
