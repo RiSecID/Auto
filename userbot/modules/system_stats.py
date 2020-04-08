@@ -115,14 +115,14 @@ async def pipcheck(pip):
                            f"{invokepip}"
                            "`\n**Result: **\n`No Result Returned/False`")
     else:
-        await pip.edit("`Use .help pip to see an example`")
+        await pip.edit("`Gunakan .help pip untuk melihat cara menggunakannya`")
 
 
 @register(outgoing=True, pattern="^.on$")
 async def amireallyalive(alive):
     """ For .on command, check if the bot is running.  """
     await alive.edit(""
-                     "**I'm online, at your services....\n**"
+                     "**SenturyBot ONLINE, gunakan dengan bijak ya !!....\n**"
                      f"`------------------------------------\n`"
                      f"•  Nama             : **{DEFAULTUSER}\n**"
                      f"`------------------------------------\n`"
@@ -137,12 +137,12 @@ async def amireallyalive(alive):
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = '.aliveu [new user without brackets] nor can it be empty'
+    output = '.aliveu [Isi Namamu] karena ini tidak bisa kosong'
     if not (message == '.aliveu' or message[7:8] != ' '):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
-        output = 'Successfully changed user to ' + newuser + '!'
+        output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
     
  
@@ -153,24 +153,24 @@ async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    await ureset.edit("`" "Sukses mengulangi data awal!" "`")
 
 
 CMD_HELP.update({
     "sysd":
     ">`.sysd`"
-    "\nUsage: Shows system information using neofetch.",
+    "\nFungsi: Memperlihatkan informasi sistem menggunakan neofetch.",
     "botver":
     ">`.botver`"
-    "\nUsage: Shows the userbot version.",
+    "\nFungsi: Melihatkan versi yang digunakan SenturyBot.",
     "pip":
     ">`.pip <module(s)>`"
-    "\nUsage: Does a search of pip modules(s).",
+    "\nFungsi: Melakukan pencarian modul pip(s).",
     "alive":
     ">`.alive`"
-    "\nUsage: Type .alive to see wether your bot is working or not."
+    "\nFungsi: Ketik .on Untuk melihat apakah bot **Aktif** atau **Tidak**."
     "\n\n>`.aliveu <text>`"
-    "\nUsage: Changes the 'user' in alive to the text you want."
+    "\nFungsi: Mengganti 'nama' di teks .on."
     "\n\n>`.resetalive`"
-    "\nUsage: Resets the user to default."
+    "\nFungsi: Mereset setting .on menjadi semula."
 })
