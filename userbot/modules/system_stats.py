@@ -124,14 +124,14 @@ async def pipcheck(pip):
 @register(outgoing=True, pattern="^.on$")
 async def amireallyalive(alive):
     """ For .on command, check if the bot is running.  """
-    await alive.edit("`"
-                     "I'm online, at your services....\n"
-                     f"------------------------------------\n"
-                     f"•  Nama             : {DEFAULTUSER}\n"
-                     f"------------------------------------\n"
-                     f"•  Python           : {python_version()}\n"
-                     f"•  Versi Telethon   : {version.__version__}\n"
-                     f"------------------------------------\n`"
+    await alive.edit(""
+                     "**I'm online, at your services....\n**"
+                     f"`------------------------------------\n`"
+                     f"•  Nama             : **{DEFAULTUSER}\n**"
+                     f"`------------------------------------\n`"
+                     f"•  Python           : `{python_version()}\n`"
+                     f"•  Versi Telethon   : `{version.__version__}\n`"
+                     f"`------------------------------------\n`"
                      "Beli Phising & Daftar Bot ? Chat [Jefanya Efandchris](t.me/JejakCheat)\n"
                      "")
 
