@@ -17,6 +17,7 @@ from userbot.events import register
 
 # ================= CONSTANT =================
 NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+IG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 @register(outgoing=True, pattern="^.sysd$")
@@ -125,7 +126,7 @@ async def amireallyalive(alive):
                      "**SenturyBot ONLINE, gunakan dengan bijak ya !!....\n**"
                      f"`------------------------------------\n`"
                      f"•  Nama             : **{NAMA}\n**"
-                     
+                     f"•  Instagram        : **{IG}\n**"
                      f"`------------------------------------\n`"
                      f"•  Python           : `{python_version()}\n`"
                      f"•  Versi Telethon   : `{version.__version__}\n`"
@@ -146,6 +147,17 @@ async def amireallyaliveuser(username):
         output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
     
+    @register(outgoing=True, pattern="^.setig")
+async def amireallyaliveuser(username):
+    """ For .setig command, change the username in the .alive command. """
+    message = username.text
+    output = '.setig [Isi IG] karena ini tidak bisa kosong'
+    if not (message == '.setig' or message[7:8] != ' '):
+        newuser = message[8:]
+        global IG
+        IG = newuser
+        output = 'Ig Berhasil Diganti Menjadi ' + newuser + '!'
+    await username.edit("`" f"{output}" "`")
  
    
 
@@ -154,6 +166,13 @@ async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
     global NAMA
     NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+    await ureset.edit("`" "Sukses mengulangi data awal!" "`")
+    
+    @register(outgoing=True, pattern="^.resetaliveig$")
+async def amireallyalivereset(ureset):
+    """ For .resetalive command, reset the username in the .alive command. """
+    global IG
+    IG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Sukses mengulangi data awal!" "`")
 
 
@@ -172,6 +191,10 @@ CMD_HELP.update({
     "\nFungsi: Ketik .on Untuk melihat apakah bot **Aktif** atau **Tidak**."
     "\n\n>`.setname <text>`"
     "\nFungsi: Mengganti 'nama' di teks .on."
+     "\n\n>`.setig <text>`"
+    "\nFungsi: Mengganti 'instagram' di teks .on."
     "\n\n>`.resetalive`"
-    "\nFungsi: Mereset setting .on menjadi semula."
+    "\nFungsi: Mereset setting nama .on menjadi semula."
+    "\n\n>`.resetaliveig`"
+    "\nFungsi: Mereset setting instagram .on menjadi semula."
 })
