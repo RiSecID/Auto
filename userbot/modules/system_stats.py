@@ -19,9 +19,6 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
-# ================= CONSTANT =================
-DEFAULTIG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
 @register(outgoing=True, pattern="^.sysd$")
 async def sysdetails(sysd):
     """ For .sysd command, get system info using neofetch. """
