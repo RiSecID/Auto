@@ -41,5 +41,5 @@ async def _(event):
 CMD_HELP.update({
         "quotly": 
         ".q \
-          \nUsage: Enhance ur text to sticker.\n"
+          \nUsage: Mengganti teks menjadi sticker.\n"
     })
