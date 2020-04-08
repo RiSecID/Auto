@@ -122,20 +122,20 @@ async def fetch_info(replied_user, event):
     user_bio = "Pengguna ini tidak memiliki BIO" if not user_bio else user_bio
 
     caption = "<b>INFORMASI USER:</b>\n\n"
-    caption += f"`Nama Depan`: {first_name}\n"
-    caption += f"`Nama Belakang`        : {last_name}\n"
-    caption += f"`Nama Pengguna`        : {username}\n"
-    caption += f"`ID Pusat Data`        : {dc_id}\n"
-    caption += f"`Jumlah PP`            :    {replied_user_profile_photos_count}\n"
-    caption += f"`Dia bot``             : {is_bot}\n"
-    caption += f"`Di Dibatasi`          : {restricted}\n"
-    caption += f"`Verifikasi telegram`  : {verified}\n"
-    caption += f"`ID`                   : <code>{user_id}</code>\n"
-    caption += f"`Grup yang sama`       : {common_chat}\n\n"
-    caption += f"`Link Profile Selamanya Milik Pengguna ini`: "
+    caption += f"<i>Nama Depan</i>: {first_name}\n"
+    caption += f"<i>Nama Belakang</i>: {last_name}\n"
+    caption += f"<i>Nama Pengguna</i>: {username}\n"
+    caption += f"<i>ID Pusat Data</i>: {dc_id}\n"
+    caption += f"<i>Jumlah PP</i>:    {replied_user_profile_photos_count}\n"
+    caption += f"<i>Dia bot</i>: {is_bot}\n"
+    caption += f"<i>Di Dibatasi</i>: {restricted}\n"
+    caption += f"<i>Verifikasi telegram</i>: {verified}\n"
+    caption += f"<i>ID</i>: <code>{user_id}</code>\n"
+    caption += f"<i>Grup yang sama</i>: {common_chat}\n\n"
+    caption += f"<i>Link Profile Selamanya Milik Pengguna ini</i>: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
-    caption += f"Bio: \n<code>{user_bio}</code>\n\n"
-    caption += f"Bot By : <a href=t.me/JejakCheat>#SenturyBot</a>"
+    caption += f"<i>Bio</i>: \n<code>{user_bio}</code>\n\n"
+    caption += f"<u>Bot By : <a href=t.me/JejakCheat>#SenturyBot</a></u>"
 
     return photo, caption
 
