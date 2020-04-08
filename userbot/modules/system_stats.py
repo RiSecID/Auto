@@ -148,16 +148,16 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
     
     @register(outgoing=True, pattern="^.setig")
-async def amireallyaliveuser(username):
-    """ For .setig command, change the username in the .alive command. """
-    message = username.text
+async def amireallyaliveuser(ig):
+    """ For .setig command, change the ig in the .alive command. """
+    message = ig.text
     output = '.setig [Isi IG] karena ini tidak bisa kosong'
     if not (message == '.setig' or message[7:8] != ' '):
         newuser = message[8:]
         global IG
         IG = newuser
         output = 'Ig Berhasil Diganti Menjadi ' + newuser + '!'
-    await username.edit("`" f"{output}" "`")
+    await ig.edit("`" f"{output}" "`")
  
    
 
