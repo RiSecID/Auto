@@ -130,11 +130,11 @@ async def fetch_info(replied_user, event):
     caption += f"Dia bot: {is_bot}\n"
     caption += f"Di Dibatasi: {restricted}\n"
     caption += f"Diverifikasi oleh Telegram: {verified}\n"
-    caption += f"ID: <code>{user_id}</code>\n\n"
-    caption += f"Obrolan umum dengan pengguna ini: {common_chat} \n"
-    caption += f"Bio: \n<code>{user_bio}</code>\n\n"
+    caption += f"ID: <code>{user_id}</code>\n"
+    caption += f"Obrolan umum dengan pengguna ini: {common_chat}\n"
+    caption += f"Bio: \n<code>{user_bio}</code>\n"
     caption += f"Link Profile Selamanya Milik Pengguna ini: "
-    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n"
+    caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>\n\n"
     caption += f"Bot By : <a href=t.me/JejakCheat>#SenturyBot</a>"
 
     return photo, caption
