@@ -18,6 +18,9 @@ from userbot.events import register
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
+# ================= CONSTANT =================
+DEFAULTIG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
 
 
 @register(outgoing=True, pattern="^.sysd$")
@@ -125,15 +128,17 @@ async def amireallyalive(alive):
     await alive.edit("`"
                      "I'm online, at your services....\n"
                      f"------------------------------------\n"
-                     f"•  User             : {DEFAULTUSER}\n"
+                     f"•  Nama             : {DEFAULTUSER}\n"
+                     f"•  Instagram        : {DEFAULTIG}\n"
+                     f"------------------------------------\n"
                      f"•  Python           : {python_version()}\n"
-                     f"•  Telethon version : {version.__version__}\n"
+                     f"•  Versi Telethon   : {version.__version__}\n"
                      f"------------------------------------\n`"
                      "Beli Phising & Daftar Bot ? Chat [Jefanya Efandchris](t.me/JejakCheat)\n"
                      "")
 
 
-@register(outgoing=True, pattern="^.aliveu")
+@register(outgoing=True, pattern="^.setname")
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
@@ -145,6 +150,18 @@ async def amireallyaliveuser(username):
         output = 'Successfully changed user to ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
 
+    
+    @register(outgoing=True, pattern="^.setig")
+async def amireallyaliveuser(username):
+    """ For .aliveu command, change the username in the .alive command. """
+    message = username.text
+    output = '.aliveu [new user without brackets] nor can it be empty'
+    if not (message == '.aliveu' or message[7:8] != ' '):
+        newuser = message[8:]
+        global DEFAULTIG
+        DEFAULTIG = newuser
+        output = 'Successfully changed user to ' + newuser + '!'
+    await username.edit("`" f"{output}" "`")
 
 @register(outgoing=True, pattern="^.resetalive$")
 async def amireallyalivereset(ureset):
