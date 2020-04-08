@@ -128,7 +128,6 @@ async def amireallyalive(alive):
                      "I'm online, at your services....\n"
                      f"------------------------------------\n"
                      f"•  Nama             : {DEFAULTUSER}\n"
-                     f"•  Instagram        : {DEFAULTIG}\n"
                      f"------------------------------------\n"
                      f"•  Python           : {python_version()}\n"
                      f"•  Versi Telethon   : {version.__version__}\n"
@@ -149,18 +148,7 @@ async def amireallyaliveuser(username):
         output = 'Successfully changed user to ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
     
-    @register(outgoing=True, pattern="^.setig")
-async def amireallyaliveuser(instagram):
-    """ For .setig command, change the username in the .alive command. """
-    message = instagram.text
-    output = '.setig [new user without brackets] nor can it be empty'
-    if not (message == '.setig' or message[7:8] != ' '):
-        newuser = message[8:]
-        global DEFAULTIG
-        DEFAULTIG = newuser
-        output = 'Successfully changed user to ' + newuser + '!'
-    await instagram.edit("`" f"{output}" "`")
-
+ 
    
 
 @register(outgoing=True, pattern="^.resetalive$")
