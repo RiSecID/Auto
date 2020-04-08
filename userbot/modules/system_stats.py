@@ -12,14 +12,14 @@ from shutil import which
 from os import remove
 from telethon import version
 
-from userbot import CMD_HELP, ALIVE_NAME
+from userbot import CMD_HELP, ALIVE_NAME, ALIVE_IG
 from userbot.events import register
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 # ================= CONSTANT =================
-DEFAULTIG = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+DEFAULTIG = str(ALIVE_IG) if ALIVE_IG else uname().node
 # ============================================
 
 
@@ -142,8 +142,8 @@ async def amireallyalive(alive):
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = '.aliveu [new user without brackets] nor can it be empty'
-    if not (message == '.aliveu' or message[7:8] != ' '):
+    output = '.setname [new user without brackets] nor can it be empty'
+    if not (message == '.setname' or message[7:8] != ' '):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
@@ -152,16 +152,16 @@ async def amireallyaliveuser(username):
 
     
     @register(outgoing=True, pattern="^.setig")
-async def amireallyaliveuser(username):
-    """ For .aliveu command, change the username in the .alive command. """
-    message = username.text
-    output = '.aliveu [new user without brackets] nor can it be empty'
-    if not (message == '.aliveu' or message[7:8] != ' '):
-        newuser = message[8:]
+async def amireallyaliveuser(ig):
+    """ For .setig command, change the username in the .alive command. """
+    message = ig.text
+    output = '.setig [new user without brackets] nor can it be empty'
+    if not (message == '.setig' or message[7:8] != ' '):
+        newig = message[8:]
         global DEFAULTIG
-        DEFAULTIG = newuser
-        output = 'Successfully changed user to ' + newuser + '!'
-    await username.edit("`" f"{output}" "`")
+        DEFAULTIG = newig
+        output = 'Successfully changed user to ' + newig + '!'
+    await ig.edit("`" f"{output}" "`")
 
 @register(outgoing=True, pattern="^.resetalive$")
 async def amireallyalivereset(ureset):
