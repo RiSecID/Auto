@@ -16,7 +16,7 @@ from userbot import CMD_HELP, ALIVE_NAME
 from userbot.events import register
 
 # ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 @register(outgoing=True, pattern="^.sysd$")
@@ -152,8 +152,8 @@ async def amireallyaliveuser(username):
 @register(outgoing=True, pattern="^.resetalive$")
 async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
-    global DEFAULTUSER
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+    global NAMA
+    NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Sukses mengulangi data awal!" "`")
 
 
