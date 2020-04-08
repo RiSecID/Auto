@@ -53,8 +53,9 @@ async def mention_afk(mention):
         if ISAFK:
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply("I'm AFK right now."
-                                        f"\nBecause I'm `{AFKREASON}`")
+                    await mention.reply(""
+                                        f"`{AFKREASON}`"
+                                       "\nBot By : [#SenturyBot](t.me/JejakCheat)")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -63,8 +64,8 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(""
-                                            f" `{AFKREASON}`\n"
-                                            "\nBot By : [Jefanya Efandchris](t.me/JejakCheat)")
+                                            f"`{AFKREASON}`\n"
+                                            "\nBot By : [#SenturyBot](t.me/JejakCheat)")
                                             
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -94,8 +95,9 @@ async def afk_on_pm(sender):
         if apprv and ISAFK:
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply("I'm AFK right now."
-                                       f"\nReason: `{AFKREASON}`")
+                    await sender.reply(""
+                                       f"`{AFKREASON}`"
+                                      "\nBot By : [#SenturyBot](t.me/JejakCheat)")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
