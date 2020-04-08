@@ -134,12 +134,12 @@ async def amireallyalive(alive):
                      "")
 
 
-@register(outgoing=True, pattern="^.aliveu")
+@register(outgoing=True, pattern="^.setname")
 async def amireallyaliveuser(username):
-    """ For .aliveu command, change the username in the .alive command. """
+    """ For .setname command, change the username in the .alive command. """
     message = username.text
-    output = '.aliveu [Isi Namamu] karena ini tidak bisa kosong'
-    if not (message == '.aliveu' or message[7:8] != ' '):
+    output = '.setname [Isi Namamu] karena ini tidak bisa kosong'
+    if not (message == '.setname' or message[7:8] != ' '):
         newuser = message[8:]
         global NAMA
         NAMA = newuser
@@ -170,7 +170,7 @@ CMD_HELP.update({
     "alive":
     ">`.alive`"
     "\nFungsi: Ketik .on Untuk melihat apakah bot **Aktif** atau **Tidak**."
-    "\n\n>`.aliveu <text>`"
+    "\n\n>`.setname <text>`"
     "\nFungsi: Mengganti 'nama' di teks .on."
     "\n\n>`.resetalive`"
     "\nFungsi: Mereset setting .on menjadi semula."
