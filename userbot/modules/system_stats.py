@@ -125,7 +125,6 @@ async def amireallyalive(alive):
                      "**SenturyBot ONLINE, gunakan dengan bijak ya !!....\n**"
                      f"`------------------------------------\n`"
                      f"•  Nama             : **{NAMA}\n**"
-                     f"•  Instagram        : **{IG}\n**"
                      f"`------------------------------------\n`"
                      f"•  Python           : `{python_version()}\n`"
                      f"•  Versi Telethon   : `{version.__version__}\n`"
