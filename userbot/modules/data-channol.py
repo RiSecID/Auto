@@ -39,7 +39,7 @@ async def get_tz(con):
         return
 
     @register(outgoing=True, pattern="^.subdomaintourney(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
-async def date_func(dat):
+    
     con = dat.pattern_match.group(1).title()
     tz_num = dat.pattern_match.group(2)
 
