@@ -112,10 +112,9 @@ async def date_func(dat):
     con = dat.pattern_match.group(1).title()
     tz_num = dat.pattern_match.group(2)
 
-    d_form = "%d/%m/%y - %H:%M"
+    d_form = "%d/%m/%y - %H:%M:%S"
     c_name = ''
-    newuser = message[8:]
-    NAMA = newuser
+    
     if len(con) > 4:
         try:
             c_name = c_n[con]
@@ -129,7 +128,7 @@ async def date_func(dat):
     else:
         
         await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}**"
-                       f"`\nStatus :` {NAMA}"
+                       f"`\nStatus :` DONE"
                        f"\nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin"
                        f"\nChat : [Jefanya Efandchris](t.me/JejakCheat)"
                        f"\n`#SenturyPanelBot`")
