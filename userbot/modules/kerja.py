@@ -2,14 +2,39 @@ import asyncio
 import re
 import time
 from time import sleep
-from userbot import CMD_HELP
+from datetime import datetime as dt
+
+from pytz import country_names as c_n
+from pytz import country_timezones as c_tz
+from pytz import timezone as tz
+
+from userbot import CMD_HELP, COUNTRY, TZ_NUMBER
 from userbot.events import register
 
 @register(outgoing=True, pattern='^.subdomainbokep1(?: |$)(.*)')
-async def typewriter(typew):
-	d_form = "%d/%m/%y - %H:%M:%S"
-	message = typew.pattern_match.group(0)
-	sleep(0)
+async def date_func(dat):
+    """ For .date command, return the date of
+        1. The country passed as an argument,
+        2. The default userbot country(set it by using .settime),
+        3. The server where the userbot runs.
+    """
+    con = dat.pattern_match.group(1).title()
+    tz_num = dat.pattern_match.group(2)
+
+    d_form = "%d/%m/%y - %H:%M:%S"
+    c_name = ''
+    
+    if len(con) > 4:
+        try:
+            c_name = c_n[con]
+        except KeyError:
+            c_name = con
+        timezones = await get_tz(con)
+    elif COUNTRY:
+        c_name = COUNTRY
+        tz_num = TZ_NUMBER
+        timezones = await get_tz(COUNTRY)
+    else:
 	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
                        f"**(%d/%m/%y - %H:%M:%S)**\n\n"
                        f"Pembelian Phising `SUBDOMAIN` Facebok Bokep `V1`\n"
