@@ -16,18 +16,18 @@ from userbot.events import register
 
 async def get_tz(con):
     """ Get time zone of the given country. """
-    if "(Uk)" in con:
-        con = con.replace("Uk", "UK")
-    if "(Us)" in con:
-        con = con.replace("Us", "US")
+    if "(Id)" in con:
+        con = con.replace("Id", "ID")
+    if "(Id)" in con:
+        con = con.replace("Id", "ID")
     if " Of " in con:
         con = con.replace(" Of ", " of ")
-    if "(Western)" in con:
-        con = con.replace("(Western)", "(western)")
+    if "(Indonesia)" in con:
+        con = con.replace("(Indonesia)", "(indonesia)")
     if "Minor Outlying Islands" in con:
         con = con.replace("Minor Outlying Islands", "minor outlying islands")
-    if "Nl" in con:
-        con = con.replace("Nl", "NL")
+    if "Id" in con:
+        con = con.replace("Id", "ID")
 
     for c_code in c_n:
         if con == c_n[c_code]:
