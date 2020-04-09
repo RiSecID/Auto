@@ -7,10 +7,11 @@ from userbot.events import register
 
 @register(outgoing=True, pattern='^.subdomainbokep1(?: |$)(.*)')
 async def typewriter(typew):
+	d_form = "%d/%m/%y - %H:%M:%S"
 	message = typew.pattern_match.group(0)
 	sleep(0)
 	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
-                       f"**%d/%m/%y - %H:%M:%S**\n\n"
+                       f"**(%d/%m/%y - %H:%M:%S)**\n\n"
                        f"Pembelian Phising `SUBDOMAIN` Facebok Bokep `V1`\n"
                        f"Menggunakan `Server 5`\n"
                        f"Order ID : `Tertera pada Screenshot`\n\n"
