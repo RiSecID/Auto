@@ -35,7 +35,7 @@ async def date_func(dat):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
-	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
+	await dat.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
                        f"**(%d/%m/%y - %H:%M:%S)**\n\n"
                        f"Pembelian Phising `SUBDOMAIN` Facebok Bokep `V1`\n"
                        f"Menggunakan `Server 5`\n"
