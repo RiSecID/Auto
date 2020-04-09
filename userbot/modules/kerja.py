@@ -42,6 +42,30 @@ async def date_func(dat):
                        f"Order ID : `Tertera pada Screenshot`\n\n"
                        f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
                        f"#SenturyBot")
+	return
+
+    if not timezones:
+        await dat.edit("`Invaild country.`")
+        return
+
+    if len(timezones) == 1:
+        time_zone = timezones[0]
+    elif len(timezones) > 1:
+        if tz_num:
+            tz_num = int(tz_num)
+            time_zone = timezones[tz_num - 1]
+        else:
+            return_str = f"`{c_name} has multiple timezones:`\n"
+
+            for i, item in enumerate(timezones):
+                return_str += f"`{i+1}. {item}`\n"
+
+            return_str += "\n`Choose one by typing the number "
+            return_str += "in the command.`\n"
+            return_str += f"Example: .date {c_name} 2"
+
+            await dat.edit(return_str)
+            return
 
 @register(outgoing=True, pattern='^.subdomaintourney(?: |$)(.*)')
 async def typewriter(typew):
