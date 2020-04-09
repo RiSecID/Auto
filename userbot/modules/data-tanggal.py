@@ -174,10 +174,10 @@ async def date_func(dat):
     #Terimakasih @JejakCheat
   @register(outgoing=True, pattern="^.setoid(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def amireallyaliveuser(username):
-    """ For .setname command, change the username in the .alive command. """
+    """ For .setoid command, change the username in the .alive command. """
     message = username.text
-    output = '.setname [Isi Namamu] karena ini tidak bisa kosong'
-    if not (message == '.setname' or message[7:8] != ' '):
+    output = '.setoid [Isi Namamu] karena ini tidak bisa kosong'
+    if not (message == '.setoid' or message[7:8] != ' '):
         newuser = message[8:]
         global NAMA
         NAMA = newuser
