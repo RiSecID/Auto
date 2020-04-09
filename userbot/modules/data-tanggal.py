@@ -117,7 +117,8 @@ async def date_func(dat):
 
     d_form = "%d/%m/%y - %H:%M"
     c_name = ''
-
+    newuser = message[8:]
+    NAMA = newuser
     if len(con) > 4:
         try:
             c_name = c_n[con]
@@ -172,18 +173,7 @@ async def date_func(dat):
                        f"({time_zone} timezone).`")
         return
     #Terimakasih @JejakCheat
-  @register(outgoing=True, pattern="^.setoid(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
-async def amireallyaliveuser(username):
-    """ For .setoid command, change the username in the .alive command. """
-    message = username.text
-    output = '.setoid [Isi Namamu] karena ini tidak bisa kosong'
-    if not (message == '.setoid' or message[7:8] != ' '):
-        newuser = message[8:]
-        global NAMA
-        NAMA = newuser
-        output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
-    await username.edit("`" f"{output}" "`")
-    return
+ 
   #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.offline(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
