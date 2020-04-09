@@ -126,7 +126,9 @@ async def date_func(dat):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
-        await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}**  `\nStatus : DONE \nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin` \nChat : @JejakCheat \n `#SenturyPanelBot`")
+        await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}** "
+                       f"`\nStatus : DONE \nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin`"
+                       f"\nChat : [Jefanya Efandchris](t.me/JejakCheat) \n `#SenturyBot`")
         return
 
     if not timezones:
