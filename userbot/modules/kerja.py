@@ -2,82 +2,10 @@ import asyncio
 import re
 import time
 from time import sleep
-from datetime import datetime as dt
-
-from pytz import country_names as c_n
-from pytz import country_timezones as c_tz
-from pytz import timezone as tz
-
-from userbot import CMD_HELP, COUNTRY, TZ_NUMBER
+from userbot import CMD_HELP
 from userbot.events import register
 
-@register(outgoing=True, pattern='^.subdomainbokep1(?: |$)(.*)')
-async def date_func(dat):
-    """ For .date command, return the date of
-        1. The country passed as an argument,
-        2. The default userbot country(set it by using .settime),
-        3. The server where the userbot runs.
-    """
-    con = dat.pattern_match.group(1).title()
-    tz_num = dat.pattern_match.group(2)
 
-    d_form = "%d/%m/%y - %H:%M:%S"
-    c_name = ''
-    
-    if len(con) > 4:
-        try:
-            c_name = c_n[con]
-        except KeyError:
-            c_name = con
-        timezones = await get_tz(con)
-    elif COUNTRY:
-        c_name = COUNTRY
-        tz_num = TZ_NUMBER
-        timezones = await get_tz(COUNTRY)
-    else:
-	await dat.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
-                       f"**(%d/%m/%y - %H:%M:%S)**\n\n"
-                       f"Pembelian Phising `SUBDOMAIN` Facebok Bokep `V1`\n"
-                       f"Menggunakan `Server 5`\n"
-                       f"Order ID : `Tertera pada Screenshot`\n\n"
-                       f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
-                       f"#SenturyBot")
-	return
-
-    if not timezones:
-        await dat.edit("`Invaild country.`")
-        return
-
-    if len(timezones) == 1:
-        time_zone = timezones[0]
-    elif len(timezones) > 1:
-        if tz_num:
-            tz_num = int(tz_num)
-            time_zone = timezones[tz_num - 1]
-        else:
-            return_str = f"`{c_name} has multiple timezones:`\n"
-
-            for i, item in enumerate(timezones):
-                return_str += f"`{i+1}. {item}`\n"
-
-            return_str += "\n`Choose one by typing the number "
-            return_str += "in the command.`\n"
-            return_str += f"Example: .date {c_name} 2"
-
-            await dat.edit(return_str)
-            return
-
-@register(outgoing=True, pattern='^.subdomaintourney(?: |$)(.*)')
-async def typewriter(typew):
-	message = typew.pattern_match.group(0)
-	sleep(0)
-	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
-                       f"**%d/%m/%y - %H:%M:%S**\n\n"
-                       f"Pembelian Phising `SUBDOMAIN` PUBG Mobile Season 12 `Tournament`\n"
-                       f"Menggunakan `Server 5`\n"
-                       f"Order ID : `Tertera pada Screenshot`\n\n"
-                       f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
-                       f"#SenturyBot")
 
 @register(outgoing=True, pattern='^.demo(?: |$)(.*)')
 async def typewriter(typew):
