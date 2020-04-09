@@ -172,7 +172,7 @@ async def date_func(dat):
                        f"({time_zone} timezone).`")
         return
     #Terimakasih @JejakCheat
-  @register(outgoing=True, pattern="^.setoid")
+  @register(outgoing=True, pattern="^.setoid(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def amireallyaliveuser(username):
     """ For .setname command, change the username in the .alive command. """
     message = username.text
@@ -183,6 +183,7 @@ async def amireallyaliveuser(username):
         NAMA = newuser
         output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
+    return
   #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.offline(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
