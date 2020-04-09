@@ -100,9 +100,6 @@ async def time_func(tdata):
         await tdata.edit(f"`It's`  **{dtnow}**  `here, in {COUNTRY}"
                          f"({time_zone} timezone).`")
         return
-# ================= CONSTANT =================
-NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
     
 #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.thanks(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
