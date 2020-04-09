@@ -115,7 +115,7 @@ async def date_func(dat):
     d_form = "%d/%m/%y - %H:%M:%S"
     c_name = ''
     
-    if len(con) > :
+    if len(con) > 4:
         try:
             c_name = c_n[con]
         except KeyError:
