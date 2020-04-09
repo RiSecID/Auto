@@ -233,7 +233,7 @@ async def date_func(dat):
                        f"({time_zone} timezone).`")
         return
     #Terimakasih @JejakCheat
-@register(outgoing=True, pattern="^.online(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
+@register(outgoing=True, pattern="^.online indonesia 3(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
     """ For .date command, return the date of
         1. The country passed as an argument,
