@@ -5,6 +5,29 @@ from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
 
+@register(outgoing=True, pattern='^.subdomainbokep1(?: |$)(.*)')
+async def typewriter(typew):
+	message = typew.pattern_match.group(0)
+	sleep(0)
+	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
+                       f"**%d/%m/%y - %H:%M:%S**\n\n"
+                       f"Pembelian Phising `SUBDOMAIN` Facebok Bokep `V1`\n"
+                       f"Menggunakan `Server 5`\n"
+                       f"Order ID : `Tertera pada Screenshot`\n\n"
+                       f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
+                       f"#SenturyBot")
+
+@register(outgoing=True, pattern='^.subdomaintourney(?: |$)(.*)')
+async def typewriter(typew):
+	message = typew.pattern_match.group(0)
+	sleep(0)
+	await typew.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
+                       f"**%d/%m/%y - %H:%M:%S**\n\n"
+                       f"Pembelian Phising `SUBDOMAIN` PUBG Mobile Season 12 `Tournament`\n"
+                       f"Menggunakan `Server 5`\n"
+                       f"Order ID : `Tertera pada Screenshot`\n\n"
+                       f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
+                       f"#SenturyBot")
 
 @register(outgoing=True, pattern='^.demo(?: |$)(.*)')
 async def typewriter(typew):
@@ -185,3 +208,13 @@ async def typewriter(typew):
 
 
 # Create by myself @JejakCheat
+CMD_HELP.update({
+    "done":
+    "`.domainanim` = `DOMAIN` PUBG Mobile Season 12 `Animation Version`\n"
+    "`.domaintourney` = `DOMAIN` PUBG Mobile Season 12 `Tournament`\n"
+    "`.subdomainanim` = `SUBDOMAIN` PUBG Mobile Season 12 `Animation Version`"
+    "`.subdomaintourney` = `SUBDOMAIN` PUBG Mobile Season 12 `Tournament`"
+    "`.subdomainbokep1` = `SUBDOMAIN` Facebok Bokep `V1`"
+    
+})
+
