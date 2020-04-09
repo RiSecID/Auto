@@ -109,7 +109,7 @@ async def update(event, repo, ups_rem, ac_br):
 @register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Checking for updates, please wait....`Bot By[Jefanya Efandchris](t.me/JejakCheat)")
+    await event.edit("`Sedang mencari pembaruan, tunggu sebentar....\n`Bot By[Jefanya Efandchris](t.me/JejakCheat)")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -158,13 +158,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`Your USERBOT is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`Bot Kamu sudah yang`  **Terbaru**  `dengan menggunakan`  **{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**Data Update Ditemukan [{ac_br}]:\n\nLIST UPDATE:**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await event.edit("`Changelog is too big, view the file to see it.`")
+            await event.edit("`Changelog terlalu besar, maka saya akan mengirim lognya dengan file.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -176,13 +176,13 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('`do ".update now/deploy" to update`')
+        return await event.respond('`ketik ".update now/deploy" untuk update`')
 
     if force_update:
         await event.edit(
-            '`Force-Syncing to latest stable userbot code, please wait...`')
+            '`Menyinkronkan paksa ke kode userbot stabil terbaru, harap tunggu...`')
     else:
-        await event.edit('`Updating userbot, please wait....`')
+        await event.edit('`Meng-update userbot, tunggu sebentar....`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
