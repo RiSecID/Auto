@@ -83,8 +83,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except GitCommandError as error:
             await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
             return repo.__del__()
-        await event.edit('`Successfully Updated!\n'
-                         'Restarting, please wait...`')
+        await event.edit('`Pembaruan selesai!\n'
+                         'Sedang memulai ulang bot, Tunggu Sebentar.........\n`'
+                         'Bot By : [Jefanya Efandchris](t.me/Jejakcheat)')
     else:
         await event.edit('`[HEROKU]:'
                          '\nPlease set up` **HEROKU_API_KEY** `variable.`'
