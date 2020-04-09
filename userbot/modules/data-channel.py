@@ -67,7 +67,7 @@ async def date_func(dat):
         
         await dat.edit(f"**BOT [TESTI](t.me/Jejakcheat14)\n**"
                        f"**{dt.now().strftime(d_form)}**\n\n"
-                       f"Pembelian Phising `DOMAIN` PUBG Mobile Season 12 `Animation Version`"
+                       f"Pembelian Phising `DOMAIN` PUBG Mobile Season 12 `Animation Version`\n"
                        f"Menggunakan `Server 5`\n"
                        f"Order ID : `Tertera pada Screenshot`\n\n"
                        f"Mau Beli Juga ? Chat [Jefanya Efandchris](t.me/JejakCheat14)\n"
@@ -112,17 +112,3 @@ async def date_func(dat):
     
  
    
-CMD_HELP.update({
-    "time":
-    ".time <country name/code> <timezone number>"
-    "\nUsage: Get the time of a country. If a country has "
-    "multiple timezones, it will list all of them "
-    "and let you select one."
-})
-CMD_HELP.update({
-    "date":
-    ".date <country name/code> <timezone number>"
-    "\nUsage: Get the date of a country. If a country has "
-    "multiple timezones, it will list all of them "
-    "and let you select one."
-})
