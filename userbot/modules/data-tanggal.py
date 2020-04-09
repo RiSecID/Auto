@@ -101,70 +101,6 @@ async def time_func(tdata):
                          f"({time_zone} timezone).`")
         return
 
-
-@register(outgoing=True, pattern="^.terimakasih(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
-async def date_func(dat):
-    """ For .date command, return the date of
-        1. The country passed as an argument,
-        2. The default userbot country(set it by using .settime),
-        3. The server where the userbot runs.
-    """
-    con = dat.pattern_match.group(1).title()
-    tz_num = dat.pattern_match.group(2)
-
-    d_form = "%d/%m/%y - %A"
-    c_name = ''
-
-    if len(con) > 4:
-        try:
-            c_name = c_n[con]
-        except KeyError:
-            c_name = con
-        timezones = await get_tz(con)
-    elif COUNTRY:
-        c_name = COUNTRY
-        tz_num = TZ_NUMBER
-        timezones = await get_tz(COUNTRY)
-    else:
-        await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}** "
-                       f"`\nStatus : DONE \nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin`"
-                       f"\nChat : [Jefanya Efandchris](t.me/JejakCheat) \n `#SenturyBot`")
-        return
-
-    if not timezones:
-        await dat.edit("`Invaild country.`")
-        return
-
-    if len(timezones) == 1:
-        time_zone = timezones[0]
-    elif len(timezones) > 1:
-        if tz_num:
-            tz_num = int(tz_num)
-            time_zone = timezones[tz_num - 1]
-        else:
-            return_str = f"`{c_name} has multiple timezones:`\n"
-
-            for i, item in enumerate(timezones):
-                return_str += f"`{i+1}. {item}`\n"
-
-            return_str += "\n`Choose one by typing the number "
-            return_str += "in the command.`\n"
-            return_str += f"Example: .date {c_name} 2"
-
-            await dat.edit(return_str)
-            return
-
-    dtnow = dt.now(tz(time_zone)).strftime(d_form)
-
-    if c_name != COUNTRY:
-        await dat.edit(
-            f"`It's`  **{dtnow}**  `in {c_name}({time_zone} timezone).`")
-        return
-
-    elif COUNTRY:
-        await dat.edit(f"`It's`  **{dtnow}**  `here, in {COUNTRY}"
-                       f"({time_zone} timezone).`")
-        return
     
 #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.thanks(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
@@ -191,7 +127,11 @@ async def date_func(dat):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
-        await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}**  `\nStatus : DONE \nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin` \nChat : @JejakCheat \n `#SenturyPanelBot`")
+        await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}**"
+                       f"`\nStatus : DONE`"
+                       f"\nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin"
+                       f"\nChat : [Jefanya Efandchris](t.me/JejakCheat)"
+                       f"\n`#SenturyPanelBot`")
         return
 
     if not timezones:
