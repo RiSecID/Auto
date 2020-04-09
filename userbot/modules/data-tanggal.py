@@ -112,7 +112,7 @@ async def date_func(dat):
     con = dat.pattern_match.group(1).title()
     tz_num = dat.pattern_match.group(2)
 
-    d_form = "%d/%m/%y - %H:%M:%S"
+    d_form = "%d/%m/%y - "%H+2"":%M:%S"
     c_name = ''
     
     if len(con) > 4:
