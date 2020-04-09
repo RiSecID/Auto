@@ -55,7 +55,7 @@ async def mention_afk(mention):
                 if AFKREASON:
                     await mention.reply(""
                                         f"`{AFKREASON}`"
-                                       "\nBot By : [#SenturyBot](t.me/JejakCheat)")
+                                       "\nBot By : #SenturyBot")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -65,7 +65,7 @@ async def mention_afk(mention):
                     if AFKREASON:
                         await mention.reply(""
                                             f"`{AFKREASON}`\n"
-                                            "\nBot By : [#SenturyBot](t.me/JejakCheat)")
+                                            "\nBot By : #SenturyBot")
                                             
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -97,7 +97,7 @@ async def afk_on_pm(sender):
                 if AFKREASON:
                     await sender.reply(""
                                        f"`{AFKREASON}`"
-                                      "\nBot By : [#SenturyBot](t.me/JejakCheat)")
+                                       f"\nBot By : #SenturyBot")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -105,8 +105,9 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply("I'm still AFK."
-                                           f"\nReason: `{AFKREASON}`")
+                        await sender.reply(""
+                                           f"`{AFKREASON}`"
+                                          f"\nBot By : #SenturyBot")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
@@ -144,7 +145,7 @@ async def type_afk_is_not_true(notafk):
     global AFKREASON
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("Aku Online Kembali.\nBot By : [#SenturyBot](t.me/JejakCheat)")
+        msg = await notafk.respond("Aku Online Kembali.\nBot By : #SenturyBot")
         await sleep(2)
         await msg.delete()
         if BOTLOG:
