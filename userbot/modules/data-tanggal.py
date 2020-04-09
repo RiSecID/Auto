@@ -100,7 +100,9 @@ async def time_func(tdata):
         await tdata.edit(f"`It's`  **{dtnow}**  `here, in {COUNTRY}"
                          f"({time_zone} timezone).`")
         return
-
+# ================= CONSTANT =================
+NAMA = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
     
 #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.thanks(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
@@ -127,8 +129,9 @@ async def date_func(dat):
         tz_num = TZ_NUMBER
         timezones = await get_tz(COUNTRY)
     else:
+        
         await dat.edit(f"`Tanggal`  **{dt.now().strftime(d_form)}**"
-                       f"`\nStatus : DONE`"
+                       f"`\nStatus :` {NAMA}"
                        f"\nTerimakasih telah Order gan, jika ada kendala silahkan kirim order ID (yang ada di data phising) nanti akan otomatis saya benerin"
                        f"\nChat : [Jefanya Efandchris](t.me/JejakCheat)"
                        f"\n`#SenturyPanelBot`")
@@ -169,7 +172,17 @@ async def date_func(dat):
                        f"({time_zone} timezone).`")
         return
     #Terimakasih @JejakCheat
-  
+  @register(outgoing=True, pattern="^.setoid")
+async def amireallyaliveuser(username):
+    """ For .setname command, change the username in the .alive command. """
+    message = username.text
+    output = '.setname [Isi Namamu] karena ini tidak bisa kosong'
+    if not (message == '.setname' or message[7:8] != ' '):
+        newuser = message[8:]
+        global NAMA
+        NAMA = newuser
+        output = 'Username Berhasil Diganti Menjadi ' + newuser + '!'
+    await username.edit("`" f"{output}" "`")
   #Terimakasih @JejakCheat
 @register(outgoing=True, pattern="^.offline(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
